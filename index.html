@@ -119,8 +119,8 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Pages</a>
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Overview</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Studies</a>
         </div>
 
         <div class="flex">
@@ -229,7 +229,7 @@
     </div>
   
   <div class="flex-grow mt-4 md:mt-0">
-    <div class="text-3xl py-4">Xinyu Liu, Loïc Kervellec, Sixian Zuo</div>
+    <div class="text-3xl py-4">Network of philosophers</div>
     <div class="w-3/12 xl:w-2/12 border-b"></div>
 
     <div class="flex items-center pt-4">
@@ -246,7 +246,7 @@
 
     
       <div class="py-8 text-lg leading-normal">
-        One huge network with many philosophers in the world. One interesting analysis about philosophers and their thoughts.
+        If you would like to gain some insights of philosophers, the wise and mysterious group of people, then you are at the right place!
       </div>
     
   </div>
@@ -284,20 +284,13 @@
 </div>
 <div class="content">
   <h2 id="abstract">Abstract</h2>
-<p>This final project contains: datasets and networks with philosophers and their attributes, like: eras and regions,   analysis of attributes of philosophers, analysis of connection among some attributes and analysis of philosophers' thoughts.</p>
+<p>The purpose of this final projct is to answer some questions: Who is the most important philosopher? What are the philosophers thinking? Does philosophy changes with time going on? To answer them, we create two datasets and three analysis:</p>
 <ul>
-<li>
-<p>Which era and region borns most siginificant philosophers? If they went through something similar in their life experience? To find it, networks are created and degrees analysis is applied to find the boom era and so on. What&rsquo;s more, each philosopher&rsquo;s page is download and be used to find frequent words and draw <a href="https://boostlabs.com/blog/what-are-word-clouds-value-simple-visualizations/">wordclouds</a>.</p>
-</li>
-<li>
-<p>If one research field has closed connection with some sepecific theories? If philosophy changes a lot with time going on? To find answer, one weight network and one heatmap is drawn to find the relationship among some attributes: era, research field and research theory.</p>
-</li>
-<li>
-<p>What are the philosophers in different fields or theories thinking about? Do they think completely different? To obtain it, some representative articles are chosen and extact frequent words in them, as well, wordclouds are drawn for better visualization.</p>
-</li>
+<li>datasets with philosophers' name and their attributes</li>
+<li>three analysis including: analysis of attributes of philosophers, analysis of connection among some attributes and analysis of philosophers' theory&amp;philosophical tradition.</li>
 </ul>
-<p>Datasets can be download <a href="https://github.com/clam-xy/dataset">here</a> and explainer notebook is shown <a href="https://nbviewer.org/gist/clam-xy/9abba4887240d9a3536a0765d508fd02">here</a>. Below is introduction to our datasets and brief of each analysis, you can also check our detail pages directly <a href="https://clam-xy.github.io/posts/">here</a>.</p>
-<h2 id="part-1-building-dataset">Part 1: Building dataset</h2>
+<p>Datasets can be download <a href="https://github.com/clam-xy/dataset">here</a> and explainer notebook is shown <a href="https://nbviewer.org/gist/clam-xy/3288b8b4a0a3682363060a20112f3675">here</a>. Below is introduction to our datasets and brief of each analysis, you can also check our detail studies directly <a href="https://clam-xy.github.io/posts/">here</a>.</p>
+<h2 id="introduction-to-dataset">Introduction to dataset:</h2>
 <p>To do anaylsis, we need to have one great dataset first<span class="nowrap"><span class="emojify">😉</span>. The dataset is from wikipedia: <a href="https://en.wikipedia.org/wiki/Lists_of_philosophers">Lists of philosophers</a>. There are two datasets for two analysis, because the philosophers in different sublists are different, sometimes some attributes or names are lost.</p>
 <ul>
 <li>For analysis of attributes, the name of philosophers is extracted from &ldquo;Lists of philosophers by name&rdquo;, and then extracting their attributes like: era, field by other lists. The dataset shows below:</li>
@@ -308,16 +301,21 @@
 </ul>
 <p><img src="/dataset_2.png" alt="Example image alt <>"></p>
 <ul>
-<li>These two datasets including Name of philosophers, their attributes including: era, field, theory, etc and different classes belong to one attribute. In the attributes analysis, region, core era and era are chosen, because they have more datas. In the connections of attributes analysis, eras, fields and theories are chosen to build weight network, because unmatched data in wikipedia, it&rsquo;s hard to add more attributes.</li>
+<li>These two datasets including name of philosophers, their attributes including: era, field, theory, etc and different classes belong to one attribute. In the attributes analysis, region, core era and era are chosen, because they have more datas. In the connections of attributes analysis, eras, fields and theories are chosen to build weight network, because unmatched data in wikipedia, it&rsquo;s hard to add more attributes.</li>
 </ul>
-<h2 id="part-2-analysis-of-attributes-of-philosophers">Part 2: Analysis of attributes of philosophers:</h2>
-<p>In this part, the description pages also download using names in dataset. Then one huge <a href="https://www.sciencedirect.com/topics/computer-science/directed-network">directed network</a> is created based on the dataset and description pages although we use the dataset with less names. The nodes are the names of philosophers, if one philosopher A appear on other philosophers' descirption page, which means A has influence or realationship on the other philosophers in some way, then each of the other philosophers will have one out-link to A and A will have one in-link. Below is the huge network with 1395 nodes and 10023 links, we tried our best to make it looks better<span class="nowrap"><span class="emojify">😑</span>:</p>
-<p><img src="/all_graph.png" alt="Example image alt <>"></p>
-<p>Then three attributes are analysed separately: by using in/out degree distribution find the most important class of one attribute and the important philosophers of each class. Then extracting some frequent words in various class and draw the wordclouds corresponding to classes in one attribute. You can check the detail in <a href="https://clam-xy.github.io/posts/core_areas/">core areas</a>, <a href="https://clam-xy.github.io/posts/regions/">regions</a> and <a href="https://clam-xy.github.io/posts/eras/">eras</a>. All of them are shown at <a href="https://clam-xy.github.io/posts/">pages</a>.</p>
-<h2 id="part-3-analysis-of-connections-among-attributes">Part 3: Analysis of connections among attributes:</h2>
-<p>In this part, one <a href="http://networksciencebook.com/chapter/2#weighted-networks">weight network</a> is built by using the second dataset with era, theory and field. The nodes are all the classes of these three attributes. If one philosopher born in <code>twenty</code> era prefers <code>environmental</code> theory and belong to <code>science</code> field. Then these three nodes will be connected with each other which creates three links. Weight is the number of specific links. It shows below:</p>
-<p><img src="/weightnetwork.png" alt="Example image alt <>"></p>
-<p>Degree distribution graph and weight heatmap are drawn to find the connections among these three attributes, you can check details in this <a href="https://clam-xy.github.io/posts/network/">page</a>.</p>
+<h2 id="introduction-to-three-analysis">Introduction to three analysis:</h2>
+<p>There are three analysis focus on: philosohpers' attributes, connection of attributes and philosohpers' thought separately. All of them in <a href="https://clam-xy.github.io/posts/">studies</a>, you can read them completely.</p>
+<ul>
+<li>
+<p>In the analysis of attributes, three attributes: <a href="https://clam-xy.github.io/posts/regions/">region</a>, <a href="https://clam-xy.github.io/posts/eras/">era</a> and <a href="https://clam-xy.github.io/posts/core_areas/">core area</a> are analysed separately to find the most import philosopher or class in each attribute. The method or tool including: <a href="https://www.sciencedirect.com/topics/computer-science/directed-network">directed network</a>, <a href="https://en.wikipedia.org/wiki/Tag_cloud">word-cloud</a>(also known as tag cloud).</p>
+</li>
+<li>
+<p>In the analysis of connection of attributes, it focus on the connections among theories and research fields and the trend of these three attributes in three eras. The method or tool including: <a href="http://networksciencebook.com/chapter/2#weighted-networks">weight network</a> and <a href="https://en.wikipedia.org/wiki/Heat_map">heatmap</a>. You can also read the details <a href="https://clam-xy.github.io/posts/connection-among-attributes/">here</a>.</p>
+</li>
+<li>
+<p>In the analysis of philosophers' theory&amp;philosophical tradition, two attributes: theory&amp;tradition are analysed separately and some representative books of some famous philosophers are analysed. You can read detail page <a href="https://clam-xy.github.io/posts/traditionaltheoryanalysis/">here</a></p>
+</li>
+</ul>
 
 </div>
 

@@ -7,43 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
-</copyright>
-    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://clam-xy.github.io/authors/hugo-authors/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Connections among attributes</title>
-      <link>https://clam-xy.github.io/posts/connection-among-attributes/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://clam-xy.github.io/posts/connection-among-attributes/</guid>
-      <description>&lt;p&gt;This page shows the analysis of connections among fields, theories and eras. Philosophy has many fields and has born many theories, if one field connects strongly with one or some specific theories? In other words, if one philosopher belong to one field prefers to research one or specific theories? In addition, did philosophy change a lot with time going on? If some theories or fields just created or being popular in recent years? One &lt;a href=&#34;http://networksciencebook.com/chapter/2#weighted-networks&#34;&gt;weight network&lt;/a&gt; is built to analyse the connections among these three attributes. The following is the result and how I found it&lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;😎&lt;/span&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://clam-xy.github.io/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://clam-xy.github.io/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>https://clam-xy.github.io/posts/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://clam-xy.github.io/posts/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Emoji Support</title>
-      <link>https://clam-xy.github.io/posts/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://clam-xy.github.io/posts/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
+</copyright><atom:link href="https://clam-xy.github.io/authors/hugo-authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
